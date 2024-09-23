@@ -1,0 +1,872 @@
+﻿﻿
+@{
+    ViewBag.Title = "Xuhuong";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@*<link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-..." crossorigin="anonymous">*@
+<link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+@*<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>*@
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Nếu sử dụng Bootstrap 4 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+@*<link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">*@
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<article>
+    <!--VIDEO-->
+    <div style="display: flex; justify-content: center">
+        <video src="https://media.rolex.com/video/upload/c_limit,w_1920/f_auto:video/q_auto:best/v1/rolexcom/new-watches/2024/hub-new-watches/videos/cover/watches-new-watches-2024-hub-cover-autoplay"
+               width="100%"
+               autoplay
+               muted
+               loop></video>
+    </div>
+    <!--Nhan hang dong ho-->
+    <div class="nhan-hang">
+        <img style="width:15%" src="~/Content/img_index/casi_1.jpg" />
+        <img style="width:15%" src="~/Content/img_index/shock.jpg" />
+        <img style="width:15%" src="~/Content/img_index/seiko.jpg" />
+        <img style="width:15%" src="~/Content/img_index/orient.jpg" />
+        <img style="width:15%" src="~/Content/img_index/omera.png" />
+        <img style="width:15%" src="~/Content/img_index/hublot.png" />
+    </div>
+    <!--Gu nao cung co-->
+    <div>
+        <p class="gunaocungco" style="width:100%; margin-top: 50px">
+            Gu nào cũng có
+        </p>
+    </div>
+    <!--Lich lam don gian tinh te-->
+    <div class="body-anh d-flex justify-content-center"
+         style="margin-left: 50px; border-radius: 5px;">
+        <div>
+            <img class="anh1" src="~/Content/img_index/DonGian.jpg" alt="Don gian" />
+            <p class="caption">ĐƠN GIẢN</p>
+        </div>
+        <div>
+            <img class="anh2" src="~/Content/img_index/TinhTe.jpg" alt="Tinh te" />
+            <p class="caption" style="margin-left: 1px">TINH TẾ</p>
+        </div>
+        <div>
+            <img class="anh3" src="~/Content/img_index/LichLam.jpg" alt="Lich Lam" />
+            <p class="caption" style="margin-left: 1px">LỊCH LÃM</p>
+        </div>
+    </div>
+    <!--GMT-->
+    <div style="margin-top: 50px">
+        <!--Cổ điển-->
+        <div>
+            <!--gu nao cung co -- co dien-->
+            <div>
+                <p class="gunaocungco" style="width: 100%; margin-top: 50px">
+                    Cổ điển
+                </p>
+            </div>
+            <!--Lich lam don gian tinh te -- co dien -->
+            <div class="body-anh d-flex justify-content-center"
+                 style="margin-left: 50px">
+                <div>
+                    <img class="anh1" src="~/Content/img_index/co_dien_1.jpg" alt="Don gian" />
+                </div>
+                <div>
+                    <img class="anh2" src="~/Content/img_index/co_dien_3.jpg" alt="Tinh te" />
+                </div>
+                <div>
+                    <img class="anh3" src="~/Content/img_index/co_dien_2.jpg" alt="Lich Lam" />
+                </div>
+            </div>
+            <!--vẻ đẹp của sự tinh tế-->
+            <div>
+                <p class="vedep">
+                    Vẻ đẹp của sự tinh tế, đẳng cấp <br />
+                    vượt thời gian.
+                </p>
+            </div>
+            <div class="anhtext">
+                <div class="anhgmt">
+                    <img src="~/Content/img_index/GMT_master.png"
+                         width="800px"
+                         height="500px"
+                         alt="GMT" />
+                </div>
+                <div class="textgmt" d-flex justify-content-center>
+                    <p>Miếng đệm Cerachrom Công nghệ tiên tiến</p>
+                    <p>Kết hợp vành đồng hồ xoay hai màu và kim‑24 giờ</p>
+                    <p>Chức năng GMT Hai múi giờ cùng lúc</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Mot so san pham-->
+    <div class="heading heading-effect text-center mb-4">
+        <h2>
+            <span>Mot so san pham</span>
+        </h2>
+    </div>
+
+    <!-------------------------Slide Product----------------->
+    <section class="slider-product-one">
+        <div class="container1">
+            <div class="slider-container">
+                <div class="slider-wrapper">
+                    <div class="slider-wrapper-content">
+                        <div class="slider-items">
+                            <!-- Slider Item 1 -->
+                            <div class="slider-item">
+                                <img src="~/Content/img_index/mua_he_1.jpg" alt="" />
+                                <div class="slider-text">
+                                    <li>Iphone 12 promax 128gb</li>
+                                    <li>Online gia re</li>
+                                    <li>
+                                        <a href="">32.990.000 <sup>d</sup> </a><span> 6%</span>
+                                    </li>
+                                    <li>15.000.000 <sup>d</sup></li>
+                                    <li>Qua 400.000 <sup>d</sup></li>
+                                    <li>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </li>
+                                </div>
+                            </div>
+                            <!-- Add more slider-item divs as needed -->
+                            <div class="slider-item">
+                                <img src="~/Content/img_index/mua_he_1.jpg" alt="" />
+                                <div class="slider-text">
+                                    <li>Iphone 12 promax 128gb</li>
+                                    <li>Online gia re</li>
+                                    <li>
+                                        <a href="">32.990.000 <sup>d</sup> </a><span> 6%</span>
+                                    </li>
+                                    <li>15.000.000 <sup>d</sup></li>
+                                    <li>Qua 400.000 <sup>d</sup></li>
+                                    <li>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </li>
+                                </div>
+                            </div>
+                            <!-- Add more slider-item divs as needed -->
+                            <div class="slider-item">
+                                <img src="~/Content/img_index/mua_he_1.jpg" alt="" />
+                                <div class="slider-text">
+                                    <li>Iphone 12 promax 128gb</li>
+                                    <li>Online gia re</li>
+                                    <li>
+                                        <a href="">32.990.000 <sup>d</sup> </a><span> 6%</span>
+                                    </li>
+                                    <li>15.000.000 <sup>d</sup></li>
+                                    <li>Qua 400.000 <sup>d</sup></li>
+                                    <li>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </li>
+                                </div>
+                            </div>
+                            <!-- Add more slider-item divs as needed -->
+                            <div class="slider-item">
+                                <img src="~/Content/img_index/mua_he_1.jpg" alt="" />
+                                <div class="slider-text">
+                                    <li>Iphone 12 promax 128gb</li>
+                                    <li>Online gia re</li>
+                                    <li>
+                                        <a href="">32.990.000 <sup>d</sup> </a><span> 6%</span>
+                                    </li>
+                                    <li>15.000.000 <sup>d</sup></li>
+                                    <li>Qua 400.000 <sup>d</sup></li>
+                                    <li>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </li>
+                                </div>
+                            </div>
+                            <!-- Add more slider-item divs as needed -->
+                        </div>
+                        <div class="slider-items">
+                            <!-- Slider Item 2 -->
+                            <div class="slider-item">
+                                <img src="~/Content/img_index/mua_he_1.jpg" alt="" />
+                                <div class="slider-text">
+                                    <li>Iphone 12 promax 128gb</li>
+                                    <li>Online gia re</li>
+                                    <li>
+                                        <a href="">32.990.000 <sup>d</sup> </a><span> 6%</span>
+                                    </li>
+                                    <li>15.000.000 <sup>d</sup></li>
+                                    <li>Qua 400.000 <sup>d</sup></li>
+                                    <li>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </li>
+                                </div>
+                            </div>
+                            <!-- Add more slider-item divs as needed -->
+                            <div class="slider-item">
+                                <img src="~/Content/img_index/mua_he_1.jpg" alt="" />
+                                <div class="slider-text">
+                                    <li>Iphone 12 promax 128gb</li>
+                                    <li>Online gia re</li>
+                                    <li>
+                                        <a href="">32.990.000 <sup>d</sup> </a><span> 6%</span>
+                                    </li>
+                                    <li>15.000.000 <sup>d</sup></li>
+                                    <li>Qua 400.000 <sup>d</sup></li>
+                                    <li>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </li>
+                                </div>
+                            </div>
+                            <!-- Add more slider-item divs as needed -->
+                            <div class="slider-item">
+                                <img src="~/Content/img_index/mua_he_1.jpg" alt="" />
+                                <div class="slider-text">
+                                    <li>Iphone 12 promax 128gb</li>
+                                    <li>Online gia re</li>
+                                    <li>
+                                        <a href="">32.990.000 <sup>d</sup> </a><span> 6%</span>
+                                    </li>
+                                    <li>15.000.000 <sup>d</sup></li>
+                                    <li>Qua 400.000 <sup>d</sup></li>
+                                    <li>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </li>
+                                </div>
+                            </div>
+                            <!-- Add more slider-item divs as needed -->
+                            <div class="slider-item">
+                                <img src="~/Content/img_index/mua_he_1.jpg" alt="" />
+                                <div class="slider-text">
+                                    <li>Iphone 12 promax 128gb</li>
+                                    <li>Online gia re</li>
+                                    <li>
+                                        <a href="">32.990.000 <sup>d</sup> </a><span> 6%</span>
+                                    </li>
+                                    <li>15.000.000 <sup>d</sup></li>
+                                    <li>Qua 400.000 <sup>d</sup></li>
+                                    <li>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </li>
+                                </div>
+                            </div>
+                            <!-- Add more slider-item divs as needed -->
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <i class="fa-solid fa-chevron-left fa-chevron-left-one"></i>
+                        <i class="fa-solid fa-chevron-right fa-chevron-right-one"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Second Slider -->
+    <div class="heading heading-effect text-center mb-4">
+        <h2>
+            <span>Mot so san pham</span>
+        </h2>
+    </div>
+    <section class="slider-product-two">
+        <div class="container2">
+            <div class="slider-container">
+                <div class="slider-wrapper">
+                    <div class="slider-wrapper-content">
+                        <div class="slider-items">
+                            <!-- Slider Item 1 -->
+                            <div class="slider-item">
+                                <img src="~/Content/img_index/mua_he_1.jpg" alt="" />
+                                <div class="slider-text">
+                                    <li>Product 1</li>
+                                    <li>Description 1</li>
+                                    <li><a href="">Price 1</a><span> Discount 1</span></li>
+                                    <li>Original Price 1</li>
+                                    <li>Additional Info 1</li>
+                                    <li>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </li>
+                                </div>
+                            </div>
+                            <!-- Add more slider-item divs as needed -->
+                            <div class="slider-item">
+                                <img src="~/Content/img_index/mua_he_1.jpg" alt="" />
+                                <div class="slider-text">
+                                    <li>Product 1</li>
+                                    <li>Description 1</li>
+                                    <li><a href="">Price 1</a><span> Discount 1</span></li>
+                                    <li>Original Price 1</li>
+                                    <li>Additional Info 1</li>
+                                    <li>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </li>
+                                </div>
+                            </div>
+                            <!-- Add more slider-item divs as needed -->
+                            <div class="slider-item">
+                                <img src="~/Content/img_index/mua_he_1.jpg" alt="" />
+                                <div class="slider-text">
+                                    <li>Product 1</li>
+                                    <li>Description 1</li>
+                                    <li><a href="">Price 1</a><span> Discount 1</span></li>
+                                    <li>Original Price 1</li>
+                                    <li>Additional Info 1</li>
+                                    <li>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </li>
+                                </div>
+                            </div>
+                            <!-- Add more slider-item divs as needed -->
+                            <div class="slider-item">
+                                <img src="~/Content/img_index/mua_he_1.jpg" alt="" />
+                                <div class="slider-text">
+                                    <li>Product 1</li>
+                                    <li>Description 1</li>
+                                    <li><a href="">Price 1</a><span> Discount 1</span></li>
+                                    <li>Original Price 1</li>
+                                    <li>Additional Info 1</li>
+                                    <li>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </li>
+                                </div>
+                            </div>
+                            <!-- Add more slider-item divs as needed -->
+                        </div>
+                        <div class="slider-items">
+                            <!-- Slider Item 2 -->
+                            <div class="slider-item">
+                                <img src="~/Content/img_index/mua_he_1.jpg" alt="" />
+                                <div class="slider-text">
+                                    <li>Product 2</li>
+                                    <li>Description 2</li>
+                                    <li><a href="">Price 2</a><span> Discount 2</span></li>
+                                    <li>Original Price 2</li>
+                                    <li>Additional Info 2</li>
+                                    <li>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </li>
+                                </div>
+                            </div>
+                            <!-- Add more slider-item divs as needed -->
+                            <div class="slider-item">
+                                <img src="~/Content/img_index/mua_he_1.jpg" alt="" />
+                                <div class="slider-text">
+                                    <li>Product 1</li>
+                                    <li>Description 1</li>
+                                    <li><a href="">Price 1</a><span> Discount 1</span></li>
+                                    <li>Original Price 1</li>
+                                    <li>Additional Info 1</li>
+                                    <li>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </li>
+                                </div>
+                            </div>
+                            <!-- Add more slider-item divs as needed -->
+                            <div class="slider-item">
+                                <img src="~/Content/img_index/mua_he_1.jpg" alt="" />
+                                <div class="slider-text">
+                                    <li>Product 1</li>
+                                    <li>Description 1</li>
+                                    <li><a href="">Price 1</a><span> Discount 1</span></li>
+                                    <li>Original Price 1</li>
+                                    <li>Additional Info 1</li>
+                                    <li>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </li>
+                                </div>
+                            </div>
+                            <!-- Add more slider-item divs as needed -->
+
+                            <div class="slider-item">
+                                <img src="~/Content/img_index/mua_he_1.jpg" alt="" />
+                                <div class="slider-text">
+                                    <li>Product 1</li>
+                                    <li>Description 1</li>
+                                    <li><a href="">Price 1</a><span> Discount 1</span></li>
+                                    <li>Original Price 1</li>
+                                    <li>Additional Info 1</li>
+                                    <li>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </li>
+                                </div>
+                            </div>
+                            <!-- Add more slider-item divs as needed -->
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <i class="fa-solid fa-chevron-left fa-chevron-left-two"></i>
+                        <i class="fa-solid fa-chevron-right fa-chevron-right-two"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Third slider-->
+    <div class="heading heading-effect text-center mb-4">
+        <h2>
+            <span>Mot so san pham</span>
+        </h2>
+    </div>
+    <section class="slider-product-third">
+        <div class="container2">
+            <div class="slider-container">
+                <div class="slider-wrapper">
+                    <div class="slider-wrapper-content">
+                        <div class="slider-items">
+                            <!-- Slider Item 1 -->
+                            <div class="slider-item">
+                                <img src="~/Content/img_index/mua_he_1.jpg" alt="" />
+                                <div class="slider-text">
+                                    <li>Product 1</li>
+                                    <li>Description 1</li>
+                                    <li><a href="">Price 1</a><span> Discount 1</span></li>
+                                    <li>Original Price 1</li>
+                                    <li>Additional Info 1</li>
+                                    <li>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </li>
+                                </div>
+                            </div>
+                            <!-- Add more slider-item divs as needed -->
+                            <div class="slider-item">
+                                <img src="~/Content/img_index/mua_he_1.jpg" alt="" />
+                                <div class="slider-text">
+                                    <li>Product 1</li>
+                                    <li>Description 1</li>
+                                    <li><a href="">Price 1</a><span> Discount 1</span></li>
+                                    <li>Original Price 1</li>
+                                    <li>Additional Info 1</li>
+                                    <li>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </li>
+                                </div>
+                            </div>
+                            <!-- Add more slider-item divs as needed -->
+                            <div class="slider-item">
+                                <img src="~/Content/img_index/mua_he_1.jpg" alt="" />
+                                <div class="slider-text">
+                                    <li>Product 1</li>
+                                    <li>Description 1</li>
+                                    <li><a href="">Price 1</a><span> Discount 1</span></li>
+                                    <li>Original Price 1</li>
+                                    <li>Additional Info 1</li>
+                                    <li>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </li>
+                                </div>
+                            </div>
+                            <!-- Add more slider-item divs as needed -->
+                            <div class="slider-item">
+                                <img src="~/Content/img_index/mua_he_1.jpg" alt="" />
+                                <div class="slider-text">
+                                    <li>Product 1</li>
+                                    <li>Description 1</li>
+                                    <li><a href="">Price 1</a><span> Discount 1</span></li>
+                                    <li>Original Price 1</li>
+                                    <li>Additional Info 1</li>
+                                    <li>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </li>
+                                </div>
+                            </div>
+                            <!-- Add more slider-item divs as needed -->
+                        </div>
+                        <div class="slider-items">
+                            <!-- Slider Item 2 -->
+                            <div class="slider-item">
+                                <img src="~/Content/img_index/mua_he_1.jpg" alt="" />
+                                <div class="slider-text">
+                                    <li>Product 2</li>
+                                    <li>Description 2</li>
+                                    <li><a href="">Price 2</a><span> Discount 2</span></li>
+                                    <li>Original Price 2</li>
+                                    <li>Additional Info 2</li>
+                                    <li>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </li>
+                                </div>
+                            </div>
+                            <!-- Add more slider-item divs as needed -->
+                            <div class="slider-item">
+                                <img src="~/Content/img_index/mua_he_1.jpg" alt="" />
+                                <div class="slider-text">
+                                    <li>Product 1</li>
+                                    <li>Description 1</li>
+                                    <li><a href="">Price 1</a><span> Discount 1</span></li>
+                                    <li>Original Price 1</li>
+                                    <li>Additional Info 1</li>
+                                    <li>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </li>
+                                </div>
+                            </div>
+                            <!-- Add more slider-item divs as needed -->
+                            <div class="slider-item">
+                                <img src="~/Content/img_index/mua_he_1.jpg" alt="" />
+                                <div class="slider-text">
+                                    <li>Product 1</li>
+                                    <li>Description 1</li>
+                                    <li><a href="">Price 1</a><span> Discount 1</span></li>
+                                    <li>Original Price 1</li>
+                                    <li>Additional Info 1</li>
+                                    <li>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </li>
+                                </div>
+                            </div>
+                            <!-- Add more slider-item divs as needed -->
+
+                            <div class="slider-item">
+                                <img src="~/Content/img_index/mua_he_1.jpg" alt="" />
+                                <div class="slider-text">
+                                    <li>Product 1</li>
+                                    <li>Description 1</li>
+                                    <li><a href="">Price 1</a><span> Discount 1</span></li>
+                                    <li>Original Price 1</li>
+                                    <li>Additional Info 1</li>
+                                    <li>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </li>
+                                </div>
+                            </div>
+                            <!-- Add more slider-item divs as needed -->
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <i class="fa-solid fa-chevron-left fa-chevron-left-third"></i>
+                        <i class="fa-solid fa-chevron-right fa-chevron-right-third"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--4-->
+    <div class="heading heading-effect text-center mb-4">
+        <h2>
+            <span>Mot so san pham</span>
+        </h2>
+    </div>
+    <section class="slider-product-fourth">
+        <div class="container2">
+            <div class="slider-container">
+                <div class="slider-wrapper">
+                    <div class="slider-wrapper-content">
+                        <div class="slider-items">
+                            <!-- Slider Item 1 -->
+                            <div class="slider-item">
+                                <img src="~/Content/img_index/mua_he_1.jpg" alt="" />
+                                <div class="slider-text">
+                                    <li>Product 1</li>
+                                    <li>Description 1</li>
+                                    <li><a href="">Price 1</a><span> Discount 1</span></li>
+                                    <li>Original Price 1</li>
+                                    <li>Additional Info 1</li>
+                                    <li>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </li>
+                                </div>
+                            </div>
+                            <!-- Add more slider-item divs as needed -->
+                            <div class="slider-item">
+                                <img src="~/Content/img_index/mua_he_1.jpg" alt="" />
+                                <div class="slider-text">
+                                    <li>Product 1</li>
+                                    <li>Description 1</li>
+                                    <li><a href="">Price 1</a><span> Discount 1</span></li>
+                                    <li>Original Price 1</li>
+                                    <li>Additional Info 1</li>
+                                    <li>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </li>
+                                </div>
+                            </div>
+                            <!-- Add more slider-item divs as needed -->
+                            <div class="slider-item">
+                                <img src="~/Content/img_index/mua_he_1.jpg" alt="" />
+                                <div class="slider-text">
+                                    <li>Product 1</li>
+                                    <li>Description 1</li>
+                                    <li><a href="">Price 1</a><span> Discount 1</span></li>
+                                    <li>Original Price 1</li>
+                                    <li>Additional Info 1</li>
+                                    <li>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </li>
+                                </div>
+                            </div>
+                            <!-- Add more slider-item divs as needed -->
+                            <div class="slider-item">
+                                <img src="~/Content/img_index/mua_he_1.jpg" alt="" />
+                                <div class="slider-text">
+                                    <li>Product 1</li>
+                                    <li>Description 1</li>
+                                    <li><a href="">Price 1</a><span> Discount 1</span></li>
+                                    <li>Original Price 1</li>
+                                    <li>Additional Info 1</li>
+                                    <li>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </li>
+                                </div>
+                            </div>
+                            <!-- Add more slider-item divs as needed -->
+                        </div>
+                        <div class="slider-items">
+                            <!-- Slider Item 2 -->
+                            <div class="slider-item">
+                                <img src="~/Content/img_index/mua_he_1.jpg" alt="" />
+                                <div class="slider-text">
+                                    <li>Product 2</li>
+                                    <li>Description 2</li>
+                                    <li><a href="">Price 2</a><span> Discount 2</span></li>
+                                    <li>Original Price 2</li>
+                                    <li>Additional Info 2</li>
+                                    <li>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </li>
+                                </div>
+                            </div>
+                            <!-- Add more slider-item divs as needed -->
+                            <div class="slider-item">
+                                <img src="~/Content/img_index/mua_he_1.jpg" alt="" />
+                                <div class="slider-text">
+                                    <li>Product 1</li>
+                                    <li>Description 1</li>
+                                    <li><a href="">Price 1</a><span> Discount 1</span></li>
+                                    <li>Original Price 1</li>
+                                    <li>Additional Info 1</li>
+                                    <li>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </li>
+                                </div>
+                            </div>
+                            <!-- Add more slider-item divs as needed -->
+                            <div class="slider-item">
+                                <img src="~/Content/img_index/mua_he_1.jpg" alt="" />
+                                <div class="slider-text">
+                                    <li>Product 1</li>
+                                    <li>Description 1</li>
+                                    <li><a href="">Price 1</a><span> Discount 1</span></li>
+                                    <li>Original Price 1</li>
+                                    <li>Additional Info 1</li>
+                                    <li>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </li>
+                                </div>
+                            </div>
+                            <!-- Add more slider-item divs as needed -->
+                            <div class="slider-item">
+                                <img src="~/Content/img_index/mua_he_1.jpg" alt="" />
+                                <div class="slider-text">
+                                    <li>Product 1</li>
+                                    <li>Description 1</li>
+                                    <li><a href="">Price 1</a><span> Discount 1</span></li>
+                                    <li>Original Price 1</li>
+                                    <li>Additional Info 1</li>
+                                    <li>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </li>
+                                </div>
+                            </div>
+                            <!-- Add more slider-item divs as needed -->
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <i class="fa-solid fa-chevron-left fa-chevron-left-fourth"></i>
+                        <i class="fa-solid fa-chevron-right fa-chevron-right-fourth"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Cua hang dong ho- footer-->
+    <div class=" container-fluid strwatchst1 ">
+        <div class="row">
+
+
+            <div class="col-md-4 strwatchst1__r">
+                <figure class="figure__hover wow zoomIn">
+                    <img class="lazy after-lazy"
+                         alt="WatchStore.vn"
+                         width="500"
+                         height="400"
+                         src="~/Content/img_index/anh_footer.jpg" />
+                </figure>
+            </div>
+            <div class="col-md-8 strwatchst1__l">
+                <div class="strwatchsr1__logo">
+                    <img class="lazy after-lazy"
+                         alt="WatchStore.vn"
+                         width="160px"
+                         height="120px"
+                         src="~/Content/img_index/anh_watchstore.jpg" />
+                </div>
+                <div class="tong" style="margin-top: -80px">
+                    <div class="strwatchsr1__title" style="background-color: black">
+                        Cửa hàng đồng hồ chính hãng
+                    </div>
+                    <div class="strwatchsr1__des" style="background-color: black">
+                        <p style="background-color: black">
+                            Được thành lập vào năm 2020, trải qua 4 năm hoạt động và phát
+                            triển, WatchStore trở thành đại lý ủy quyền cho rất nhiều thương
+                            hiệu đến từ Nhật Bản và Thụy Sỹ chuyên bán đồng hồ chính
+                            hãng.<br />&nbsp;
+                        </p>
+                        <p style="background-color: black">
+                            Chính sách bảo hành 5 năm cùng với các chương trình giảm giá tốt
+                            sẽ giúp bạn mua sắm dễ dàng. Với đội ngũ nhân viên tận tình, am
+                            hiểu về đồng hồ, Tiệm Đồng Hồ WatchStore rất vui được phục vụ
+                            quý khách. WatchStore hứa sẽ hoàn thiện hơn mỗi ngày để mang đến
+                            trải nghiệm tuyệt vời nhất có thể cho mọi khách hàng. Chúc quý
+                            khách mọi điều tốt lành!
+                        </p>
+                    </div>
+                </div>
+                <div class="view__more3" style="background-color: rgb(0, 0, 0)">
+                    <a title="xem thêm">Xem thêm</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <button id="myButton">Hiển thị trang chi tiết</button>
+
+    <script>
+    document.getElementById("myButton").addEventListener("click", function() {
+        window.location.href = '@Url.Action("Chi_tiet", "Xuhuong")'; // Điều hướng tới action Chi_tiet trong HomeController
+    });
+    </script>
+
+</article>
