@@ -1,0 +1,129 @@
+﻿@model WebApplication1.Models.Customer
+
+@{
+    Layout = null;
+}
+
+<link href="~/Content/assets/css/app.min.css" rel="stylesheet" />
+
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden; /* Ẩn cuộn cho toàn bộ trang */
+    }
+
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+    }
+
+    .form-container {
+        max-width: 400px;
+        width: 100%;
+        padding: 20px;
+        height: auto; /* Chiều cao tối đa cho vùng chứa form */
+    }
+
+    .background-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        filter: brightness(50%) contrast(120%) sepia(40%);
+    }
+</style>
+
+
+<body>
+
+    <!-- Video nền -->
+    <video autoplay muted loop playsinline class="background-video">
+        <source src="~/Content/img/Img/img_wed/video_index/video_index.webm" type="video/webm" />
+    </video>
+    <div class="content">
+        <div class="form-container">
+            <h1 style="font-size: 35px; color: #3d8484;margin-right:30px ">SIGN TO BREGUET</h1>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        <label style="margin-right: 75%; color: #d5aeae " for="username">Name:</label>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.FullName, new { htmlAttributes = new { @class = "form-control", style = "width: 100%; height: 40px;border: none; border-radius: 10px; background-color:#ffe4e48a" } })
+                            @Html.ValidationMessageFor(model => model.FullName, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label style="margin-right: 65%; color: #d5aeae" for="password"> Password:</label>
+
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control", style = "width: 100%; height: 40px;border: none; border-radius: 10px; background-color:#ffe4e48a" } })
+                            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label style="margin-right: 75%; color: #d5aeae" for="email">Email:</label>
+
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", style = "width: 100%; height: 40px;border: none; border-radius: 10px; background-color:#ffe4e48a" } })
+                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label style="margin-right: 70%; color: #d5aeae" for="phoneNumber">Phone:</label>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control", style = "width: 100%; height: 40px;border: none; border-radius: 10px; background-color:#ffe4e48a" } })
+                            @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label style="margin-right: 70%; color: #d5aeae" for="gender">Gender:</label>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Gender, new { htmlAttributes = new { @class = "form-control", style = "width: 100%; height: 40px;border: none; border-radius: 10px; background-color:#ffe4e48a" } })
+                            @Html.ValidationMessageFor(model => model.Gender, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label style="margin-right: 70%; color: #d5aeae" for="address"> Adress:</label>
+
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control", style = "width: 100%; height: 40px;border: none; border-radius: 10px; background-color:#ffe4e48a" } })
+                            @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Sign" class="btn btn-default" style="background-color: #00ff90; border: none; border-radius: 10px;" />
+                        </div>
+                    </div>
+                </div>
+            }
+
+
+
+            @section Scripts {
+                @Scripts.Render("~/bundles/jqueryval")
+            }
+        </div>
+    </div>
+</body>
+

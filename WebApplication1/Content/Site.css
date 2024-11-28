@@ -41,6 +41,7 @@ a {
 .tieude {
     border-bottom: 1px solid transparent;
     transition: border-bottom 2s;
+    white-space: nowrap;
 }
 
     .tieude:hover {
@@ -626,3 +627,4 @@ nav ul li.search-container {
         width: 100%;
     }
 }
+

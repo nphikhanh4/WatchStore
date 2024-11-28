@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f49a43b2ecab4013b1047998b6212b41" Name="Diagram1" ZoomLevel="100">
+        <EntityTypeShape EntityType="WatchStore_WebModel.Admin" Width="1.5" PointX="3.75" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WatchStore_WebModel.Brand" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WatchStore_WebModel.Category" Width="1.5" PointX="3.75" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="WatchStore_WebModel.Customer" Width="1.5" PointX="9" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WatchStore_WebModel.Detail" Width="1.5" PointX="8.25" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="WatchStore_WebModel.district" Width="1.5" PointX="13" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WatchStore_WebModel.Feedback" Width="1.5" PointX="11.25" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="WatchStore_WebModel.Images_Certification" Width="1.5" PointX="3" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WatchStore_WebModel.Images_Default" Width="1.5" PointX="8.25" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WatchStore_WebModel.Images_Reality" Width="1.5" PointX="8.25" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="WatchStore_WebModel.Order" Width="1.5" PointX="6" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WatchStore_WebModel.OrderItem" Width="1.5" PointX="8.25" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WatchStore_WebModel.Product" Width="1.5" PointX="6" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WatchStore_WebModel.province" Width="1.5" PointX="10.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="WatchStore_WebModel.Supplier" Width="1.5" PointX="3.75" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WatchStore_WebModel.Video" Width="1.5" PointX="8.25" PointY="22" IsExpanded="true" />
+        <EntityTypeShape EntityType="WatchStore_WebModel.ward" Width="1.5" PointX="15.25" PointY="7" IsExpanded="true" />
+        <AssociationConnector Association="WatchStore_WebModel.FK__Product__Created__5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="WatchStore_WebModel.FK__Images_Ce__Brand__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="WatchStore_WebModel.FK__Product__BrandID__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="WatchStore_WebModel.FK__Product__Categor__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="WatchStore_WebModel.FK__Feedback__Custom__68487DD7" ManuallyRouted="false" />
+        <AssociationConnector Association="WatchStore_WebModel.FK__Order__Note__6FE99F9F" ManuallyRouted="false" />
+        <AssociationConnector Association="WatchStore_WebModel.FK__Detail__ProductI__6477ECF3" ManuallyRouted="false" />
+        <AssociationConnector Association="WatchStore_WebModel.FK_District_Province" ManuallyRouted="false" />
+        <AssociationConnector Association="WatchStore_WebModel.FK_Wards_District" ManuallyRouted="false" />
+        <AssociationConnector Association="WatchStore_WebModel.FK__Feedback__Produc__693CA210" ManuallyRouted="false" />
+        <AssociationConnector Association="WatchStore_WebModel.FK__Images_De__Produ__5AEE82B9" ManuallyRouted="false" />
+        <AssociationConnector Association="WatchStore_WebModel.FK__Images_Re__Produ__60A75C0F" ManuallyRouted="false" />
+        <AssociationConnector Association="WatchStore_WebModel.FK__OrderItem__Order__73BA3083" ManuallyRouted="false" />
+        <AssociationConnector Association="WatchStore_WebModel.FK__OrderItem__Produ__74AE54BC" ManuallyRouted="false" />
+        <AssociationConnector Association="WatchStore_WebModel.FK__Product__Supplie__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="WatchStore_WebModel.FK__Video__ProductID__5812160E" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="WatchStore_WebModel.Voucher" Width="1.5" PointX="3.75" PointY="3.25" />
+        <EntityTypeShape EntityType="WatchStore_WebModel.OTP" Width="1.5" PointX="11.25" PointY="2.875" />
+        <AssociationConnector Association="WatchStore_WebModel.FK__OTP__CustomerID__123EB7A3" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

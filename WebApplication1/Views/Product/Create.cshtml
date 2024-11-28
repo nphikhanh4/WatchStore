@@ -1,0 +1,114 @@
+﻿@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create Product</h2>
+<!-- Make sure the enctype is multipart/form-data for file upload -->
+<form action="/Product/Create" method="post" enctype="multipart/form-data">
+    <div class="card-body">
+        <!-- Product Name Field -->
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label font-weight-semibold" for="ProductName">Product Name</label>
+            <div class="col-sm-10">
+                <input type="text"
+                       class="form-control"
+                       id="ProductName"
+                       name="ProductName"
+                       placeholder="Enter product name"
+                       required />
+            </div>
+        </div>
+
+        <!-- Product Price Field -->
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label font-weight-semibold" for="Price">Price</label>
+            <div class="col-sm-10">
+                <input type="number"
+                       class="form-control"
+                       id="Price"
+                       name="Price"
+                       placeholder="Enter product price"
+                       step="0.01"
+                       required />
+            </div>
+        </div>
+
+        <!-- Brand Field -->
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label font-weight-semibold" for="BrandID">Brand</label>
+            <div class="col-sm-10">
+                <select class="custom-select" id="BrandID" name="BrandID" required>
+                    <option value="">-- Select Brand --</option>
+                    @foreach (var brand in ViewBag.Brands)
+                    {
+                        <option value="@brand.BrandID">@brand.BrandName</option>
+                    }
+                </select>
+            </div>
+        </div>
+
+        <!-- Category Field -->
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label font-weight-semibold" for="CategoryID">Category</label>
+            <div class="col-sm-10">
+                <select class="custom-select" id="CategoryID" name="CategoryID" required>
+                    <option value="">-- Select Category --</option>
+                    @foreach (var category in ViewBag.Categories) // Assuming you set this in your controller
+                    {
+                        <option value="@category.CategoryID">@category.CategoryName</option>
+                    }
+                </select>
+            </div>
+        </div>
+
+        <!-- CreatedAt Field -->
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label font-weight-semibold" for="CreatedAt">Created At</label>
+            <div class="col-sm-10">
+                <input type="date"
+                       class="form-control"
+                       id="CreatedAt"
+                       name="CreatedAt"
+                       required />
+            </div>
+        </div>
+
+        <!-- Supplier Dropdown Field -->
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label font-weight-semibold" for="SupplierID">Supplier</label>
+            <div class="col-sm-10">
+                <select class="custom-select" id="SupplierID" name="SupplierID" required>
+                    <option value="">-- Select Supplier --</option>
+                    @foreach (var supplier in ViewBag.Suppliers)
+                    {
+                        <option value="@supplier.SupplierID">@supplier.SupplierName</option>
+                    }
+                </select>
+            </div>
+        </div>
+
+        <!-- Product Image Upload Field -->
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label font-weight-semibold" for="ImageUrl">Product Image</label>
+            <div class="col-sm-10">
+                <input type="file"
+                       class="form-control-file"
+                       id="ImageUrl"
+                       name="ImageUrl"
+                       accept="image/*"
+                       required />
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="form-group row">
+            <div class="col-sm-10 offset-sm-2">
+                <button type="submit" class="btn btn-primary">
+                    <i class="anticon anticon-save"></i>
+                    <span>Save</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</form>

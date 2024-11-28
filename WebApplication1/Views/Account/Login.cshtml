@@ -1,0 +1,108 @@
+﻿
+@model WebApplication1.Models.login
+
+@{
+
+    Layout = null;}
+
+<link href="~/Content/assets/css/app.min.css" rel="stylesheet" />
+
+<style>
+
+    .space-between{
+        display:flex;
+        justify-content:space-between;
+    }
+
+    .txt1 {
+        font-family: Poppins-Regular;
+        font-size: 13px;
+        color: #e5e5e5;
+        line-height: 1.5;
+    }
+    .background-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        filter: brightness(80%) contrast(120%) sepia(40%);
+    }
+
+    .content {
+        display: flex;
+        justify-content: center; /* Căn giữa ngang */
+        align-items: center; /* Căn giữa dọc */
+        height: 100vh; /* Chiều cao 100% màn hình */
+        text-align: center;
+    }
+
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .form-container {
+        max-width: 400px;
+        width: 100%;
+        padding: 30px;
+    }
+</style>
+<!-- Video nền -->
+<video autoplay muted loop playsinline class="background-video">
+    <source src="~/Content/img/Img/img_wed/video_index/video_index.webm" type="video/webm" />
+</video>
+
+<!-- Nội dung căn giữa -->
+
+<body>
+    <div class="content">
+        <div class="form-container">
+            <h1 style="font-size: 35px; color: #3d8484; margin-left:10px">LOGIN TO BREGUET</h1>
+            <h3>Access your Hublot account</h3>
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-horizontal" style="color: #b1b1df; font-size: 20px;line-height:40px">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        <label style="margin-right:60%;" class="font-weight-semibold" for="userName">Username:</label>
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(model => model.Email, new { @class = "form-control", style = "width:340px; padding-left: 40px; height: 40px; border: none; border-radius: 10px;" })
+                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label style="margin-right:60%;" class="font-weight-semibold" for="password">Password:</label>
+                        <div class="col-md-10">
+                            @Html.PasswordFor(model => model.Password, new { @class = "form-control", style = "width:340px; padding-left: 40px; height: 40px; border: none; border-radius: 10px;" })
+                            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="space-between" style="margin: 0 10% 5% 10%">
+                                @Html.ActionLink("Forgot Password?", "ResetPassword", "Account")
+                                @Html.ActionLink("Register?", "Register", "Account")
+                        </div>
+                        <div class="form-row">
+                            @Html.Hidden("id")
+                            <input type="submit" value="Login" class="form-login" />
+                        </div>
+                    </div>
+                </div>
+            }
+
+
+
+            @section Scripts {
+                @Scripts.Render("~/bundles/jqueryval")
+            }
+        </div>
+    </div>
+</body>

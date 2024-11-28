@@ -1,0 +1,204 @@
+﻿@model WebApplication1.Models.Product
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="page-header no-gutters has-tab">
+    <div class="d-md-flex m-b-15 align-items-center justify-content-between">
+        <div class="media align-items-center m-b-15">
+            <div class="avatar avatar-image rounded" style="height: 70px; width: 70px">
+                <img src="~/Content/imgdata/@Model.ImageUrl" alt="Product Image">
+            </div>
+            <div class="m-l-15">
+                <h4 class="m-b-0">@Model.ProductName</h4>
+                <p class="text-muted m-b-0">Code: #@Model.ProductID</p>
+            </div>
+        </div>
+        <div class="m-b-15">
+            <a href="@Url.Action("Edit", "Product", new { id = Model.ProductID })" class="btn btn-primary btn-tone m-r-5">
+                <i class="anticon anticon-edit"></i>
+                <span>Edit</span>
+            </a>
+        </div>
+    </div>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#product-overview">Overview</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#product-images">Product Images</a>
+        </li>
+    </ul>
+</div>
+<div class="container-fluid">
+    <div class="tab-content m-t-15">
+        <div class="tab-pane fade show active" id="product-overview">
+            <div class="row">
+                <!-- Ratings Card -->
+                <div class="col-sm-6 col-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="media align-items-center">
+                                <i class="font-size-40 text-success anticon anticon-smile"></i>
+                                <div class="m-l-15">
+                                    <p class="m-b-0 text-muted">10 ratings</p>
+                                    <div class="star-rating m-t-5">
+                                        @for (int i = 5; i >= 1; i--)
+                                        {
+                                            <input type="radio" id="star3-@i" name="rating-3" value="@i" disabled @(i == 5 ? "checked" : "") />
+                                            <label for="star3-@i" title="@i star"></label>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sales Card -->
+                <div class="col-sm-6 col-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="media align-items-center">
+                                <i class="font-size-40 text-primary anticon anticon-shopping-cart"></i>
+                                <div class="m-l-15">
+                                    <p class="m-b-0 text-muted">Sales</p>
+                                    <h3 class="m-b-0 ls-1">1,521</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reviews Card -->
+                <div class="col-sm-6 col-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="media align-items-center">
+                                <i class="font-size-40 text-primary anticon anticon-message"></i>
+                                <div class="m-l-15">
+                                    <p class="m-b-0 text-muted">Reviews</p>
+                                    <h3 class="m-b-0 ls-1">27</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Available Stock Card -->
+                <div class="col-sm-6 col-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="media align-items-center">
+                                <i class="font-size-40 text-primary anticon anticon-stock"></i>
+                                <div class="m-l-15">
+                                    <p class="m-b-0 text-muted">Available Stock</p>
+                                    <h3 class="m-b-0 ls-1">152</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Basic Info Card -->
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Basic Info</h4>
+
+                    <table class="product-info-table m-t-20">
+                        <tbody>
+                            <tr>
+                                <td>Price:</td>
+                                <td class="text-dark font-weight-semibold">@Model.Price</td>
+                            </tr>
+                            <tr>
+                                <td>Brand:</td>
+                                <td>@Model.Brand.BrandName</td>
+                            </tr>
+                            <tr>
+                                <td>CategoryName:</td>
+                                <td>@Model.Category.CategoryName</td>
+                            </tr>
+                            <tr>
+                                <td>CreatedAt:</td>
+                                <td class="text-dark font-weight-semibold">@Model.CreatedAt</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+            <!-- Option Info Card -->
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Option Info</h4>
+                    <div class="table-responsive">
+                        <table class="product-info-table m-t-20">
+                            <tbody>
+                                <tr>
+                                    <td>Sizes:</td>
+                                    <td>S, M, L, XL</td>
+                                </tr>
+                                <tr>
+                                    <td>Colors:</td>
+                                    <td class="d-flex">
+                                        <span class="d-flex align-items-center m-r-20">
+                                            <span class="badge badge-dot product-color m-r-5" style="background-color: #4c4e69"></span>
+                                            <span>Dark Blue</span>
+                                        </span>
+                                        <span class="d-flex align-items-center m-r-20">
+                                            <span class="badge badge-dot product-color m-r-5" style="background-color: #868686"></span>
+                                            <span>Gray</span>
+                                        </span>
+                                        <span class="d-flex align-items-center m-r-20">
+                                            <span class="badge badge-dot product-color m-r-5" style="background-color: #8498c7"></span>
+                                            <span>Gray Blue</span>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Fit:</td>
+                                    <td>Skinny Fit</td>
+                                </tr>
+                                <tr>
+                                    <td>Material:</td>
+                                    <td>Polyester</td>
+                                </tr>
+                                <tr>
+                                    <td>Ship From:</td>
+                                    <td>Columbia</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Images Tab -->
+        <div class="tab-pane fade" id="product-images">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img class="img-fluid" src="~/Content/assets/images/others/product-1.jpg" alt="Product Image 1">
+                        </div>
+                        <div class="col-md-3">
+                            <img class="img-fluid" src="~/Content/assets/images/others/product-2.jpg" alt="Product Image 2">
+                        </div>
+                        <div class="col-md-3">
+                            <img class="img-fluid" src="~/Content/assets/images/others/product-3.jpg" alt="Product Image 3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<a href="@Url.Action("Index", "Product")" class="btn btn-primary btn-tone m-r-5">Back to list</a>
